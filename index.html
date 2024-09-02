@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="du">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ----------main style------------ -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <!-- ------------Google Fonts-------------- -->
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <!-- --------------Icon pack font-awesome----------- -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- --------------------Google Maps Api---------------- -->
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7F3URup7S4Of3R3cJQLk535vNnUQRzg&callback=initMap">
+        </script>
+        <title> Food Deliver </title>
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="img/logo.png" style="height:60px;" alt="logo-image">
+                    </div>
+                    <nav>
+                        <ul id="menu-items">
+                            <li><a href="">Home</a></li>
+                            <li><a href="index2.html">Products</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="register.html">Account</a></li>
+                        </ul>
+                    </nav>
+                    <img src="img/cart.png" alt="cart" width="30px" height="30px" class="cart-img">
+                    <img src="img/menu.png" alt="menu" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <h1 class="text-white">Healthy Food and Restraunt</h1>
+                        <p>Discover the best food & drinks in Meerut</p>
+                        <a href="#" class="btn btn-main">Explore Now &#8594;</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/banner food.avif" alt="banner-image" class="center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- featured products -->
+        <div class="small-container mt-5">
+            <h2 class="title">Collections</h2>
+            <div class="row horizontal-scroll-wrapper squares">
+                <div class="col-4 box-container">
+                    <div class="image-overlay"></div>
+                    <img src="img/fruits.png" alt="Fruits">
+                    <h5 class="product_name">Organic Food</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Food Eating</h3>
+                        <h4 class="content-price">Rs500.99</h4>
+                        <div class="content-btn btn btn-secondary" title="Add to Cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
+                    </div>
+                    <p class="price_name" >Rs399.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/fast food.jpg" alt="Junk Food">
+                    <h5 class="product_name">Fast Food</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs249.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/egg food.webp" alt="Protein">
+                    <h5 class="product_name">Fried Eggs</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price_name" >Rs119.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/plate-food-with-bowl-food-it-with-picture-sandwich-bowl-beans-salad_68880-156122.avif" alt="junk-food">
+                    <h5 class="product_name">Sandwich</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs199.99</p>
+                </div>
+            </div>
+            <!-- Latest products -->
+            <h2 class="title"> Healthy Food Collections </h2>
+            <div class="row">
+                <div class="col-4 box-container">
+                    <img src="img/healthy and natural food.png" alt="Food">
+                    <h5 class="product_name">Natural Food</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs349.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/vegetable.png" alt="Vegetable">
+                    <h5 class="product_name">Fresh Vegetables</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs149.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/seedless fruit food.png" alt="Fruits">
+                    <h5 class="product_name">Seedless Fruits</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs49.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/seafood.png" alt="SeaFood">
+                    <h5 class="product_name">Fish</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p class="price_name" >Rs249.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/san-francisco-healthy-food-leaf-vegetable.png" alt="san-francisco healthy food leaf">
+                    <h5 class="product_name">Food-leaf</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs79.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/farfalle-pasta-with-meatballs-spinach-sauce-with-fried-chickpeas_2829-18264.avif" alt="pasta">
+                    <h5 class="product_name">Pasta</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs69.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/delicious-food-white-plate_144627-34691.avif" alt="food">
+                    <h5 class="product_name">Delicious Food White</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs99.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/delicious-food-wooden-board_144627-34716.avif" alt="food wooden">
+                    <h5 class="product_name">Food</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs89.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/pasta-with-zucchini-sweet-peppers-with-basil-garlic-dressing_2829-17952.avif" alt="sweet pasta">
+                    <h5 class="product_name">Pasta</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p class="price_name" >Rs89.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/plate-food-with-burger-fries-it_68880-158418.avif" alt="burger">
+                    <h5 class="product_name">Burger</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs69.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/italian food.png" alt="italian food">
+                    <h5 class="product_name">Itilian Food</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs149.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/food egg.jpg" alt="egg">
+                    <h5 class="product_name">Egg</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs159,99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/chinese noodles vegetarian.png" alt="Noodles">
+                    <h5 class="product_name">Chinese Noodles</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs79.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/restrorant food.jpg" alt="food">
+                    <h5 class="product_name">Food</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs109.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/junk food chicken.png" alt="chicken">
+                    <h5 class="product_name">Chicken</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs249.99</p>
+                </div>
+                <div class="col-4 box-container">
+                    <img src="img/honey.png" alt="Vitamin">
+                    <h5 class="product_name">Honey</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="price_name" >Rs499.99</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- offer -->
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="img/food banner.jpeg" class="offer-img">
+                    </div>
+                    <div class="col-6 text-data text-white">
+                        <p>Top Prodcuts you should take it</p>
+                        <h1>Best Product limitd offer!</h1>
+                        
+                        <a href="" class="btn">Buy Now &#8594</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="locate">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <h3>My Google Maps Demo</h3>
+                        <div id="map"></div>
+                    </div>
+                    <div class="col-2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- brands -->
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="img/amazon_PNG24.png" alt="amazon logo">
+                    </div>
+                    <div class="col-3">
+                        <img src="img/paytm.png" alt="apple logo">
+                    </div>
+                    <div class="col-3">
+                        <img src="img/mastercard_PNG7.png" alt="mastercard logo">
+                    </div>
+                    <div class="col-3">
+                        <img src="img/phonepay.png" alt="mastercard logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------footer------ -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our app</h3>
+                        <p>Top G5  Enabled Prodcuts with good support</p>
+                        <div class="app-logo">
+                            <img src="img/playstore.png" alt="">
+                            <img src="img/appstore.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="img" alt="">
+                        <p>Best technology enabled product?</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2021 Sarthak</p>
+            </div>
+        </div>
+        <script src="main.js"></script>
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+    </body>
+
+</html>
